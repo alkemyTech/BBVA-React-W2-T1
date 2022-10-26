@@ -1,8 +1,11 @@
 import React from 'react';
 import Countdown from 'react-countdown';
-import img1 from '../img/campaign-recent-02.jpg';
+import Campaigns1 from '../img/Activities4.jpg';
+import Campaigns2 from '../img/Campaigns2.jpg';
+import Campaigns3 from '../img/Campaigns3.jpg';
+/* import img1 from '../img/campaign-recent-02.jpg';
 import img2 from '../img/campaign-recent-03.jpg';
-import img3 from '../img/campaign-tabs.jpg';
+import img3 from '../img/campaign-tabs.jpg'; */
 import './Content.scss';
 
 function Content () {
@@ -11,7 +14,7 @@ function Content () {
 
   return (
     <>
-      <div className='content-school "container-sm"'>
+      <div className='content-school'>
         <h1>Descripcion de la campaña</h1>
         <div id="carouselExampleIndicators" className="carousel" data-bs-ride="carousel">
             <div className="carousel-indicators">
@@ -21,13 +24,13 @@ function Content () {
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
-                <img src={img1} className="img-fluid" alt="Responsive image"/>
+                <img src={Campaigns1} className="img-fluid" alt="Responsive image"/>
               </div>
               <div className="carousel-item">
-                <img src={img2}  className="img-fluid" alt="Responsive image"/>
+                <img src={Campaigns2}  className="img-fluid" alt="Responsive image"/>
               </div>
               <div className="carousel-item">
-                <img src={img3} className="img-fluid" alt="Responsive image"/>
+                <img src={Campaigns3} className="img-fluid" alt="Responsive image"/>
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -44,9 +47,12 @@ function Content () {
             <li>Hora</li>
             <li>Lugar</li>
           </ul>
-          <Countdown date={Date.now() + 450000000} > 
-            <Completionist />
-          </Countdown>
+          <div className="countdown">
+             <Countdown date={Date.now() + 450000000} > 
+               <Completionist />
+              </Countdown>
+          </div>
+         
       </div>
     </>
   );
